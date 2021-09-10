@@ -30,16 +30,26 @@ SHOW TABLES;
 DESCRIBE boo.User_Tabelle;
 
 /* ----- Daten ------- */
-INSERT INTO boo.User_Tabelle(user_name,pwd,first_name,family_name) VALUES ("Grizabella_100",SHA1("1405"),"Grizabella","Mütze");
-INSERT INTO boo.User_Tabelle(user_name,pwd,first_name,family_name) VALUES ("Indu_100",SHA1("43#0"),"Indu","Surendran");
-INSERT INTO boo.User_Tabelle(user_name,pwd,first_name,family_name) VALUES ("Kanishk_23",SHA1("1234"),"Kanishk","Prasanna");
-INSERT INTO boo.User_Tabelle(user_name,pwd,first_name,family_name) VALUES ("Max_40",SHA1("9#23"),"Max","Mütze");
+INSERT INTO boo.User_Tabelle(user_name,pwd,first_name,family_name) VALUES 
+("Grizabella_100",SHA1("1405"),"Grizabella","Mütze"),
+ ("Indu_100",SHA1("43#0"),"Indu","Surendran"),
+ ("Kanishk_23",SHA1("1234"),"Kanishk","Prasanna"),
+ ("Max_40",SHA1("9#23"),"Max","Mütze");
 /* Inhalte der Tabelle anzeigen */
 SELECT * FROM boo.User_Tabelle;
 
 #DROP TABLE IF EXISTS test;
 
 #SHOW TABLES;
+
+ALTER TABLE boo.User_Tabelle ADD user_plz INT(5) NOT NULL DEFAULT 00000;
+
+DESCRIBE boo.User_Tabelle;
+
+UPDATE boo.User_Tabelle set user_plz = 45136 WHERE id = 1;
+SELECT * FROM boo.User_Tabelle;
+
+
 
 
 
