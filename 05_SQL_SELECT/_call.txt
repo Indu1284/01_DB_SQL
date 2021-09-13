@@ -1,1 +1,10 @@
-source 05_SQL_SELECT/05_db_csv_import_.sql;
+source 05_SQL_SELECT/05_1_parsing_CSV.sql;
+
+source 05_SQL_SELECT/05_2_que_basic.sql;
+
+source 05_SQL_SELECT/05_3_que_basic.sql;
+
+source 05_SQL_SELECT/05_03_que_filter.sql;
+
+
+mysql-ctl cli;
